@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=prompt("Enter an number");
+    var square=0;
+    var cube=0;
+    var myTable="<h1 style='text-align:center'>Program to find squares and cubes</h1>";
+    myTable +="<table border='1' align='center'><tr><th>No</th><th>Square</th><th>Cube</th></tr>";
+    for (var i=0;i <=num;i++) {
+        square = i * i;
+        cube = i * i * i;
+        myTable +="<tr><td>" +i+ "</td><td>" + square + "</td><td>" +cube+ "</td></tr>";
+    }
+    myTable +="<table>";
+    document.write(myTable);
+</script>
+</body>
+</html>1
