@@ -6,7 +6,6 @@
     <script>
         var fs=5;
         function textAnimate(){
-            document.getElementById('text').style.color="red";
             var timer=setInterval(animate,100);
             var state="growing";
             function animate() {
@@ -14,11 +13,13 @@
             {
                 fs += 5;
                 document.getElementById('text').style.fontSize=fs+"pt";
+                document.getElementById('text').style.color="red";
             }
             if(state=="shrinking")
             {
                 fs -= 5;
                 document.getElementById('text').style.fontSize=fs+"pt";
+                document.getElementById('text').style.color="blue";
             }
             if(fs==50)
                 state="shrinking";
