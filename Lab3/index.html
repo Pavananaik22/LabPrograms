@@ -5,30 +5,32 @@
     <title>Program 3</title>
     <script>
         var fs=5;
-        function textAnimate(opt){
-            var timer=setInterval(animate,100)
-            function animate(){
-                fs +=5;
-            document.getElementById('text').style.fontSize=fs+"pt";
+        function textAnimate(){
+            var timer=setInterval(animate,100);
+            var state="growing";
+            function animate() {
+            if(state=="growing")
+            {
+                fs += 5;
+                document.getElementById('text').style.fontSize=fs+"pt";
+            }
+            if(state=="shrinking")
+            {
+                fs -= 5;
+                document.getElementById('text').style.fontSize=fs+"pt";
+            }
             if(fs==50)
+                state="shrinking";
+            if(fs==5)
                 clearInterval(timer);
         }
         }
-        if(opt == 'd'){
-            var timer=setInterval(animate,100)
-            function animate(){
-                fs -= 5;
-                document.getElementById('text').style.fontSize=fs+"pt";
-                if(fs==5)
-                    clearInterval(timer);
-            }
-        }
+
     </script>
 </head>
 <body>
 <h1> Program to Increase/Decrease the font size</h1>
 <p id="text">TEXT GROWING</p>
-<button onclick="textAnimate('i')">Increase</button>
-<button onclick="textAnimate('d')">Decrease</button>
+<button onclick="textAnimate()">Animate</button>
 </body>
 </html>
