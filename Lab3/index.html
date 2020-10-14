@@ -11,26 +11,32 @@
     <script>
         var fs=5;
         function textAnimate(){
+            document.getElementById('text').innerText="";
             var timer=setInterval(animate,100);
             var state="growing";
             function animate() {
-            if(state=="growing")
+            if(state == "growing")
             {
                 fs += 5;
-                document.getElementById('text').style.fontSize=fs+"pt";
+                //document.getElementById('text').style.fontSize= fs +'pt';
                 document.getElementById('text').style.color="red";
                 document.getElementById('text').innerText="TEXT GROWING";
+               // document.getElementById('text').style.position="fixed";
+                document.getElementById('text').style.top=fs+"vh";
+
             }
-            if(state=="shrinking")
+            if(state == "shrinking")
             {
                 fs -= 5;
-                document.getElementById('text').style.fontSize=fs+"pt";
+                //document.getElementById('text').style.fontSize= fs + 'pt';
                 document.getElementById('text').style.color="blue";
                 document.getElementById('text').innerText="TEXT SHRINKING";
+              //  document.getElementById('text').style.position="fixed";
+                document.getElementById('text').style.top=fs+"vh";
             }
-            if(fs==50)
+            if(fs == 100)
                 state="shrinking";
-            if(fs==5)
+            if(fs == 5)
                 clearInterval(timer);
         }
         }
@@ -39,6 +45,9 @@
 </head>
 <body onload="textAnimate()">
 <h1> Program to Increase/Decrease the font size</h1>
-<p id="text"></p>
+<h2 style="position: fixed" id="text">TEXT GROWING</h2>
 </body>
 </html>
+
+
+
