@@ -28,6 +28,40 @@
         }
         function findReverse(inp){
             var num=inp;
+            var digits=0;
+            var rem=0, res=0;
+            while(num!=0)
+            {
+                num=parseInt(num/10);
+                digits++;
+            }
+            var temp=inp;
+            while(temp!=0)
+            {
+                temp=parseInt(temp/10);
+            }
+            if(inp==res)
+                alert("Arm Strong Number");
+            else
+                alert("Not an Arm Strong Number");
+        }
+    </script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function findReverse(inp){
+            var num=inp;
             var rem=0, rev=0;
             while(num!=0)
             {
