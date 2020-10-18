@@ -28,22 +28,14 @@
         }
         function findReverse(inp){
             var num=inp;
-            var digits=0;
-            var rem=0, res=0;
+            var rem=0, rev=0;
             while(num!=0)
             {
+                rem=num%10;
+                rev=rem+rev*10;
                 num=parseInt(num/10);
-                digits++;
             }
-            var temp=inp;
-            while(temp!=0)
-            {
-                temp=parseInt(temp/10);
-            }
-            if(inp==res)
-                alert("Arm Strong Number");
-            else
-                alert("Not an Arm Strong Number");
+            alert("Original number: "+inp+"\n Reversed Number: "+rev);
         }
     </script>
 </head>
