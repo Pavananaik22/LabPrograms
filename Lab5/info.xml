@@ -1,41 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="prog5.css"?>
+<?xml-stylesheet type="text/css" href="Lab55.css"?>
 <!--document type definition-->
-<!DOCTYPE student_info[
-        <!ELEMENT student_info (h1, h2+, label+)>
-        <!ELEMENT h1 (#PCDATA)>
-        <!ELEMENT h2 (#PCDATA)>
-        <!ELEMENT label (USN|name|coll|branch|year|email)*>
-        <!ELEMENT USN (#PCDATA)>
-        <!ELEMENT name (#PCDATA)>
-        <!ELEMENT coll (#PCDATA)>
-        <!ELEMENT branch (#PCDATA)>
-        <!ELEMENT year (#PCDATA)>
-        <!ELEMENT email (#PCDATA)>
-        ]>
+<!DOCTYPE student_info [
+
+                <!ELEMENT student_info (h1, h2+, label+)>
+                <!ELEMENT h1 (#PCDATA)>
+                <!ELEMENT h2 (#PCDATA)>
+                <!ELEMENT label (#PCDATA|USN|name|coll|branch|year|email)*>
+                <!ELEMENT USN (#PCDATA)>
+                <!ELEMENT name (#PCDATA)>
+                <!ELEMENT college (#PCDATA)>
+                <!ELEMENT branch (#PCDATA)>
+                <!ELEMENT year (#PCDATA)>
+                <!ELEMENT email (#PCDATA)>
+                ]>
 
 <student_info>
+    <h1>student information</h1>
+    <h2>student1 information</h2>
 
-    <h1>Student Information</h1>
-    <h2> Student 1 Information</h2>
-    <label><USN>75</USN></label>
+    <label><USN>4SO17CS075</USN></label>
     <label><name>Pavana</name></label>
-    <label><coll>SJEC</coll></label>
-    <label><branch>CSE</branch></label>
-    <label><year>2021</year></label>
-    <label><email>pavananaik44@gmail.com</email></label>
-    <h2> Student 2 Information</h2>
-    <label><USN>76</USN></label>
+    <label><college>St Joseph Engineering College</college></label>
+    <label><branch>Computer Science</branch></label>
+    <label><mail>pavananaik44@gmail.com</mail></label>
+
+    <h2>student2 information</h2>
+
+    <label><USN>4SO17CS095</USN></label>
     <label><name>Sameeksha</name></label>
-    <label><coll>SJEC</coll></label>
-    <label><branch>ECE</branch></label>
-    <label><year>2020</year></label>
-    <label><email>sameeksha@gmail.com</email></label>
-    <h2> Student 3 Information</h2>
-    <label><USN>333</USN></label>
-    <label><name>Pallavi</name></label>
-    <label><coll>SJEC</coll></label>
-    <label><branch>MECH</branch></label>
-    <label><year>2018</year></label>
-    <label><email>pallavi@gmail.com</email></label>
+    <label><college>St Joseph Engineering College</college></label>
+    <label><branch>Information Science</branch></label>
+    <label><mail>samee@gmail.com</mail></label>
+
+    <h2>student3 information</h2>
+
+    <label><USN>4SO17CS045</USN></label>
+    <label><name>Janvi</name></label>
+    <label><college>St Joseph Engineering College</college></label>
+    <label><branch>Computer Science</branch></label>
+    <label><mail>janu@gmail.com</mail></label>
+
 </student_info>
