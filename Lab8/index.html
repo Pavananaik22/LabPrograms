@@ -1,34 +1,33 @@
+My Drive
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Program 8</title>
+    <title> Program 8 </title>
 </head>
 <body>
 <h1>Simple Calculator</h1>
-<form action="calculate.php" method="get">
-    <div style="padding: 20px">
-        <label for="first">First Operand : </label>
-        <input required pattern="[0-9.]+" id="first" type="text" name="fop">
+<form action="calculate.php" method="POST">
+    <div style='padding: 20px'>
+        <label for="first">First Operand:</label>
+        <input required pattern="[0-9.]+" title="Only numbers allowed" id="first" type="text" name="op1">
     </div>
     <div style="padding: 20px">
-        <label >Choose an Operator : </label>
-        <input required id="plus" type="radio" name="operator" value="+">
-        <label for="plus">Add (+)</label>
-        <input id="minus" type="radio" name="operator" value="-">
-        <label for="minus">Minus (-)</label>
-        <input id="multiply" type="radio" name="operator" value="*">
-        <label for="multiply">Multiply (*)</label>
-        <input id="divide" type="radio" name="operator" value="/">
-        <label for="divide">Devide (/)</label>
+        <label>Choose an Operator: </label>
+        <input required id="plus" type="radio" name="operator" value="+"><label for="plus">Add (+)</label>
+        <input id="minus" type="radio" name="operator" value="-"><label for="minus">Subtract (-)</label>
+        <input id="multiply" type="radio" name="operator" value="*"><label for="multiply">Multiply (*)</label>
+        <input id="divide" type="radio" name="operator" value="/"><label for="divide">Divide (/)</label>
     </div>
-    <div style="padding: 20px">
-        <label for="second">Second Operand : </label>
-        <input required pattern="[0-9.]+" id="second" type="text" name="sop">
+    <div style='padding: 20px'>
+        <label for="second">Second Operand:</label>
+        <input required pattern="[0-9.]+" title="Only numbers allowed"id="second" type="text" name="op2">
     </div>
-    <div style="padding: 20px">
-        <button type="submit">Submit</button>
+    <div style='padding: 20px'>
+        <button type="submit">SUBMIT</submit>
     </div>
+
+
 </form>
 </body>
 </html>
